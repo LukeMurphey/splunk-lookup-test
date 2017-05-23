@@ -1,0 +1,8 @@
+[lookups/luke_owned.csv]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = luke
+
+[]
+access = read : [ * ], write : [ admin ]
+export = system
