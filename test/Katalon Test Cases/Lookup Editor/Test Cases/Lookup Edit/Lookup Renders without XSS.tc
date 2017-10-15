@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Lookup Renders without XSS</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c890498e-e001-4fad-b49f-56c8dbae492d</testCaseGuid>
+</TestCaseEntity>

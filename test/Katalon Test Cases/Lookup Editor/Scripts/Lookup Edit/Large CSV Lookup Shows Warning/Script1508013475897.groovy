@@ -22,19 +22,11 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('Authenticate'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_edit?owner=nobody&namespace=lookup_test&lookup=lukes_lookup.csv&type=csv')
+WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_edit?owner=nobody&namespace=lookup_test&lookup=11MB.csv&type=csv')
 
-WebUI.click(findTestObject('Editor/First Empty Cell'))
+WebUI.waitForElementVisible(findTestObject('Editor/Warning Message'), 0)
 
-WebUI.doubleClick(findTestObject('Editor/Handsontable Selected Cell'))
-
-WebUI.setText(findTestObject('Editor/Handsontable Cell Edit Input'), 'Test')
-
-WebUI.click(findTestObject('Editor/Save Button'))
-
-WebUI.waitForElementVisible(findTestObject('Editor/Success Message'), 0)
-
-WebUI.verifyElementText(findTestObject('Editor/Success Message'), 'Lookup file saved successfully')
+WebUI.verifyElementText(findTestObject('Editor/Warning Message'), 'The file is too big to be edited (must be less than 10 MB)')
 
 WebUI.closeBrowser()
 
