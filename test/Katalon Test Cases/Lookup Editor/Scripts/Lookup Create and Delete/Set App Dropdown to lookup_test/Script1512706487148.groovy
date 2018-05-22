@@ -18,13 +18,16 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Authenticate'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.waitForElementPresent(findTestObject('New KV Collection/App Dropdown'), 0)
 
-WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_list')
+WebUI.waitForElementVisible(findTestObject('Miscellaneous/Does Not Exist'), 3)
 
-WebUI.verifyElementPresent(findTestObject('Lister/Lookup List Table'), 0)
+WebUI.click(findTestObject('New KV Collection/App Dropdown'))
 
-WebUI.closeBrowser()
+WebUI.sendKeys(findTestObject('Miscellaneous/Dropdown Filter Search'), 'lookup_test')
+
+WebUI.waitForElementVisible(findTestObject('Miscellaneous/Does Not Exist'), 3)
+
+WebUI.executeJavaScript('$(\'[class*=main_Popover] button:first-child\').click();', [])
 

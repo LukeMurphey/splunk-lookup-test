@@ -4,6 +4,17 @@
    <name>Open Search Link</name>
    <tag></tag>
    <elementGuidId>62a4aeef-fbeb-4b1d-86a8-2e63aae1cf42</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Open in Search' or . = 'Open in Search')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.open-in-search</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

@@ -18,13 +18,22 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('Authenticate'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_list')
+WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_edit?action=new&type=csv')
 
-WebUI.verifyElementPresent(findTestObject('Lister/Lookup List Table'), 0)
+WebUI.callTestCase(findTestCase('Lookup Create and Delete/Set App Dropdown to lookup_test'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.setText(findTestObject('Editor/Lookup Name Input'), 'LookupTest1234.csv')
+
+WebUI.click(findTestObject('Editor/First Cell in First Content Row'))
+
+WebUI.waitForElementNotVisible(findTestObject('Editor/Warning Message'), 0)
+
+WebUI.click(findTestObject('Editor/Save Button'))
+
+WebUI.waitForElementNotPresent(findTestObject('Editor/Warning Message'), 0)
 
 WebUI.closeBrowser()
 

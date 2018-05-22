@@ -18,7 +18,6 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('Authenticate'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -26,5 +25,19 @@ WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_list')
 
 WebUI.verifyElementPresent(findTestObject('Lister/Lookup List Table'), 0)
 
-WebUI.closeBrowser()
+WebUI.sendKeys(findTestObject('Lister/Lookup Filter'), 'LookupTest1234.csv')
+
+WebUI.click(findTestObject('Lister/Delete Lookup Link'))
+
+WebUI.waitForElementVisible(findTestObject('Lister/Delete Confirmation Button'), 0)
+
+WebUI.click(findTestObject('Lister/Delete Confirmation Button'))
+
+WebUI.sendKeys(findTestObject('Lister/Lookup Filter'), 'LookupTest1234.csvOLD')
+
+WebUI.sendKeys(findTestObject('Lister/Lookup Filter'), 'LookupTest1234.csv')
+
+WebUI.waitForElementVisible(findTestObject('Lister/No matching records'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Lister/No matching records'), 0)
 

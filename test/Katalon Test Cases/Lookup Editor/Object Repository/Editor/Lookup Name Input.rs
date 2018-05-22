@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Warning Message</name>
+   <name>Lookup Name Input</name>
    <tag></tag>
-   <elementGuidId>a74df0ed-4043-48b2-9304-738f7320c9d1</elementGuidId>
-   <selectorCollection>
-      <entry>
-         <key>BASIC</key>
-         <value>.warning-message > .message</value>
-      </entry>
-   </selectorCollection>
+   <elementGuidId>b181cd7e-0c32-43ea-8f41-d44d020bda30</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -17,6 +11,6 @@
       <matchCondition>equals</matchCondition>
       <name>css</name>
       <type>Main</type>
-      <value>.warning-message > .message</value>
+      <value>#lookup-name input</value>
    </webElementProperties>
 </WebElementEntity>

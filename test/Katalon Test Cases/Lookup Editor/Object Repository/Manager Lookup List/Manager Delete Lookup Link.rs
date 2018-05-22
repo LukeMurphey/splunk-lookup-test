@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Success Message</name>
+   <name>Manager Delete Lookup Link</name>
    <tag></tag>
-   <elementGuidId>b5834e24-95a6-4773-8555-5adc6ee3719c</elementGuidId>
+   <elementGuidId>40e16fa8-b7f3-4d49-81d1-90fb60dc61e6</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-      </entry>
-      <entry>
          <key>BASIC</key>
-         <value>.info-message > .message</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -23,6 +16,6 @@
       <matchCondition>equals</matchCondition>
       <name>css</name>
       <type>Main</type>
-      <value>.info-message > .message</value>
+      <value>.col-actions > a + .splPipe + a</value>
    </webElementProperties>
 </WebElementEntity>

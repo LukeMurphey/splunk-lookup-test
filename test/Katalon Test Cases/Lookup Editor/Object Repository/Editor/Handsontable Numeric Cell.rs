@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Success Message</name>
+   <name>Handsontable Numeric Cell</name>
    <tag></tag>
-   <elementGuidId>b5834e24-95a6-4773-8555-5adc6ee3719c</elementGuidId>
+   <elementGuidId>4ed26a9a-c88c-4c10-b9a4-e94912be1fa5</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
+         <value>td.htNumeric</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>.info-message > .message</value>
+         <value>.handsontable td.htNumeric</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>css</name>
       <type>Main</type>
-      <value>.info-message > .message</value>
+      <value>.handsontable td.htNumeric</value>
    </webElementProperties>
 </WebElementEntity>

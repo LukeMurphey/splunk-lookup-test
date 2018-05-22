@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Warning Message</name>
+   <name>Lookup List Table</name>
    <tag></tag>
-   <elementGuidId>a74df0ed-4043-48b2-9304-738f7320c9d1</elementGuidId>
-   <selectorCollection>
-      <entry>
-         <key>BASIC</key>
-         <value>.warning-message > .message</value>
-      </entry>
-   </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <elementGuidId>ba982d75-cffc-499d-84d7-bfd98e793ced</elementGuidId>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>css</name>
       <type>Main</type>
-      <value>.warning-message > .message</value>
+      <value>#table_wrapper > table</value>
    </webElementProperties>
 </WebElementEntity>

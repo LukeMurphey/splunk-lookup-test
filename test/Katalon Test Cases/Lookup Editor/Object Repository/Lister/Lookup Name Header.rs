@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Success Message</name>
+   <name>Lookup Name Header</name>
    <tag></tag>
-   <elementGuidId>b5834e24-95a6-4773-8555-5adc6ee3719c</elementGuidId>
+   <elementGuidId>a917b472-10fc-449f-86a8-08da6d3cdd54</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-      </entry>
-      <entry>
          <key>BASIC</key>
-         <value>.info-message > .message</value>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -23,6 +17,6 @@
       <matchCondition>equals</matchCondition>
       <name>css</name>
       <type>Main</type>
-      <value>.info-message > .message</value>
+      <value>.lookup-header > h2:nth-child(2)</value>
    </webElementProperties>
 </WebElementEntity>

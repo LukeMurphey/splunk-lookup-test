@@ -20,11 +20,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Authenticate'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.openBrowser('http://127.0.0.1:8000')
 
-WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_list')
+WebUI.setText(findTestObject('Miscellaneous/Login/input_username'), 'luke')
 
-WebUI.verifyElementPresent(findTestObject('Lister/Lookup List Table'), 0)
+WebUI.setText(findTestObject('Miscellaneous/Login/input_password'), 'lk')
 
-WebUI.closeBrowser()
+WebUI.click(findTestObject('Miscellaneous/Login/input_splButton-primary btn'))
 

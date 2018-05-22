@@ -28,9 +28,11 @@ WebUI.click(findTestObject('Editor/First Editable KV Store Cell'))
 
 WebUI.doubleClick(findTestObject('Editor/First Editable KV Store Cell'))
 
+WebUI.waitForElementVisible(findTestObject('Editor/Handsontable Cell Edit Input'), 0)
+
 WebUI.setText(findTestObject('Editor/Handsontable Cell Edit Input'), 'Test')
 
-WebUI.click(findTestObject('Miscellaneous/Page Header'))
+WebUI.click(findTestObject('Lister/Lookup Name Header'))
 
 WebUI.verifyTextPresent('Modified: ', false)
 

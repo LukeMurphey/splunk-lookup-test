@@ -18,13 +18,26 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('Authenticate'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_list')
+WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_edit?action=new&type=kv')
 
-WebUI.verifyElementPresent(findTestObject('Lister/Lookup List Table'), 0)
+WebUI.sendKeys(findTestObject('Editor/Lookup Name Input'), 'test_kv_store')
+
+WebUI.callTestCase(findTestCase('Lookup Create and Delete/Set App Dropdown to lookup_test'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('New KV Collection/First Field'), 'test')
+
+WebUI.sendKeys(findTestObject('New KV Collection/Second Field'), 'test2')
+
+WebUI.waitForElementNotVisible(findTestObject('Editor/Warning Message'), 0)
+
+WebUI.click(findTestObject('New KV Collection/Create Lookup Button'))
+
+WebUI.waitForElementVisible(findTestObject('Editor/Warning Message'), 0)
+
+WebUI.verifyElementVisible(findTestObject('Editor/Warning Message'))
 
 WebUI.closeBrowser()
 

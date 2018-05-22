@@ -24,7 +24,7 @@ WebUI.callTestCase(findTestCase('Authenticate'), [:], FailureHandling.STOP_ON_FA
 
 WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_edit?action=new&type=kv')
 
-WebUI.setText(findTestObject('Editor/KV Collection Name Input'), 'test_kv_store_hierarchy')
+WebUI.setText(findTestObject('Editor/Lookup Name Input'), 'test_kv_store_hierarchy')
 
 WebUI.setText(findTestObject('New KV Collection/First Field'), 'foo')
 
