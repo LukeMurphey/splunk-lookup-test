@@ -21,3 +21,8 @@ Thumbs.db
 /tmp/
 .vscode/*
 lib/*
+
+# Katalon files
+test/Katalon Test Cases/Lookup Editor/Reports/*
+test/Katalon Test Cases/Lookup Editor/bin/lib/Temp*class
+test/Katalon Test Cases/Lookup Editor/Libs/Temp*groovy
