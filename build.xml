@@ -1,5 +1,13 @@
 
 <project default="package" name="lookup_test">
 	<import file="basebuild.xml"/>
+
+    <!-- ================================= 
+          target: splunk.refresh
+         ================================= -->
+    <target name="splunk.refresh" description="Refresh Splunk" depends="define_reload_conf_macro,verify_splunk_home">
+    	<reload_conf endpoint="collections-conf" />
+    	<reload_conf endpoint="transforms-lookup" />
+    </target>
 </project>
 		
