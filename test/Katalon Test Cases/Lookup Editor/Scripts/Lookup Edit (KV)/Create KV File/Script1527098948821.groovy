@@ -21,21 +21,27 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Authenticate'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_list')
+WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_edit?action=new&type=kv')
 
-WebUI.verifyElementPresent(findTestObject('Lister/Lookup List Table'), 0)
+WebUI.setText(findTestObject('Editor/Lookup Name Input'), 'KVLookupTest1234')
 
-WebUI.sendKeys(findTestObject('Lister/Lookup Filter'), 'LookupTest1234.csv')
+WebUI.setText(findTestObject('New KV Collection/First Field'), 'first')
 
-WebUI.click(findTestObject('Lister/Delete Lookup Link'))
+WebUI.setText(findTestObject('New KV Collection/Second Field'), 'second')
 
-WebUI.waitForElementVisible(findTestObject('Lister/Delete Confirmation Button'), 0)
+WebUI.callTestCase(findTestCase('Lookup Create and Delete/Set App Dropdown to lookup_test'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Lister/Delete Confirmation Button'))
+WebUI.waitForElementNotVisible(findTestObject('Editor/Warning Message'), 0)
 
-WebUI.sendKeys(findTestObject('Lister/Lookup Filter'), 'LookupTest1234.csv')
+WebUI.waitForElementVisible(findTestObject('Editor/Warning Message'), 4)
 
-WebUI.waitForElementVisible(findTestObject('Lister/No matching records'), 0)
+WebUI.click(findTestObject('New KV Collection/Create Lookup Button'))
 
-WebUI.verifyElementPresent(findTestObject('Lister/No matching records'), 0)
+WebUI.waitForElementPresent(findTestObject('Editor/Handsontable'), 15)
+
+WebUI.waitForElementPresent(findTestObject('Lister/Lookup Name Header'), 0)
+
+WebUI.verifyElementText(findTestObject('Lister/Lookup Name Header'), '/ KVLookupTest1234')
+
+WebUI.closeBrowser()
 

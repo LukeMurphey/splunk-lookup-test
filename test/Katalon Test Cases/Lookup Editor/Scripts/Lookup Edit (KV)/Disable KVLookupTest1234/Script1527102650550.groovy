@@ -25,17 +25,19 @@ WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_list')
 
 WebUI.verifyElementPresent(findTestObject('Lister/Lookup List Table'), 0)
 
-WebUI.sendKeys(findTestObject('Lister/Lookup Filter'), 'LookupTest1234.csv')
+WebUI.sendKeys(findTestObject('Lister/Lookup Filter'), 'KVLookupTest1234')
 
-WebUI.click(findTestObject('Lister/Delete Lookup Link'))
+WebUI.click(findTestObject('Lister/Disable Lookup Link'))
 
-WebUI.waitForElementVisible(findTestObject('Lister/Delete Confirmation Button'), 0)
+WebUI.waitForElementVisible(findTestObject('Lister/Disable Confirmation Button'), 0)
 
-WebUI.click(findTestObject('Lister/Delete Confirmation Button'))
+WebUI.click(findTestObject('Lister/Disable Confirmation Button'))
 
-WebUI.sendKeys(findTestObject('Lister/Lookup Filter'), 'LookupTest1234.csv')
+WebUI.waitForElementVisible(findTestObject('Lister/Enable Lookup Link'), 0)
 
-WebUI.waitForElementVisible(findTestObject('Lister/No matching records'), 0)
+WebUI.sendKeys(findTestObject('Lister/Lookup Filter'), '')
 
-WebUI.verifyElementPresent(findTestObject('Lister/No matching records'), 0)
+WebUI.verifyElementPresent(findTestObject('Lister/Enable Lookup Link'), 0)
+
+WebUI.closeBrowser()
 
