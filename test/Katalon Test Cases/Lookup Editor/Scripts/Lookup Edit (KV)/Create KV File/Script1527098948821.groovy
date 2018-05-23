@@ -39,9 +39,9 @@ WebUI.click(findTestObject('New KV Collection/Create Lookup Button'))
 
 WebUI.waitForElementPresent(findTestObject('Editor/Handsontable'), 15)
 
-WebUI.waitForElementPresent(findTestObject('Lister/Lookup Name Header'), 0)
+WebUI.waitForElementPresent(findTestObject('Editor/Lookup Name Header'), 0)
 
-WebUI.verifyElementText(findTestObject('Lister/Lookup Name Header'), '/ KVLookupTest1234')
+WebUI.verifyElementText(findTestObject('Editor/Lookup Name Header'), '/ KVLookupTest1234')
 
 WebUI.closeBrowser()
 

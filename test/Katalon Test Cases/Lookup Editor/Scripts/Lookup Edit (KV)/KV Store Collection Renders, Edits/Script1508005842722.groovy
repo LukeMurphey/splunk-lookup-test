@@ -32,7 +32,7 @@ WebUI.waitForElementVisible(findTestObject('Editor/Handsontable Cell Edit Input'
 
 WebUI.setText(findTestObject('Editor/Handsontable Cell Edit Input'), 'Test')
 
-WebUI.click(findTestObject('Lister/Lookup Name Header'))
+WebUI.click(findTestObject('Editor/Lookup Name Header'))
 
 WebUI.verifyTextPresent('Modified: ', false)
 

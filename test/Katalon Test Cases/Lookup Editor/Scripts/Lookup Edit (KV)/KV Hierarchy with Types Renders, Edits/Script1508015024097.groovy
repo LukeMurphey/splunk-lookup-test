@@ -24,13 +24,13 @@ WebUI.callTestCase(findTestCase('Authenticate'), [:], FailureHandling.STOP_ON_FA
 
 WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_edit?owner=nobody&namespace=lookup_test&lookup=test_kv_store_hierarchy&type=kv')
 
-WebUI.click(findTestObject('Editor/Handsontable Numeric Cell'))
+WebUI.click(findTestObject('Editor/First Address.zip Cell'))
 
-WebUI.doubleClick(findTestObject('Editor/Handsontable Numeric Cell'))
+WebUI.doubleClick(findTestObject('Editor/First Address.zip Cell'))
 
 WebUI.setText(findTestObject('Editor/Handsontable Cell Edit Input'), 'Test')
 
-WebUI.click(findTestObject('Lister/Lookup Name Header'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Editor/Lookup Name Header'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForElementVisible(findTestObject('Editor/Warning Message'), 0)
 
@@ -44,7 +44,7 @@ WebUI.doubleClick(findTestObject('Editor/First Address.zip Cell'))
 
 WebUI.setText(findTestObject('Editor/Handsontable Cell Edit Input'), '60083')
 
-WebUI.click(findTestObject('Miscellaneous/Page Header'))
+WebUI.click(findTestObject('Editor/Lookup Name Header'))
 
 WebUI.waitForElementVisible(findTestObject('Editor/Success Message'), 0)
 
