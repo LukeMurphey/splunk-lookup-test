@@ -26,5 +26,17 @@ WebUI.navigateToUrl('http://127.0.0.1:8000/en-US/app/lookup_editor/lookup_list')
 
 WebUI.verifyElementPresent(findTestObject('Lister/Lookup List Table'), 0)
 
+WebUI.setText(findTestObject('Lister/Lookup Filter'), 'test_kv_store_field_types')
+
+WebUI.waitForElementVisible(findTestObject('Lister/Lookup Row For test_kv_store_field_types'), 0)
+
+WebUI.verifyElementVisible(findTestObject('Lister/Lookup Row For test_kv_store_field_types'))
+
+WebUI.setText(findTestObject('Lister/Lookup Filter'), '100k_rows.csv')
+
+WebUI.delay(2)
+
+WebUI.verifyTextPresent('Showing 1 to 1 of 1', false)
+
 WebUI.closeBrowser()
 
